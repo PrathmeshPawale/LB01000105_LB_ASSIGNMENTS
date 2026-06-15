@@ -4,7 +4,6 @@
 // that are divisible by both 2 and 3.
 //
 // Time Complexity : O(N)
-// Space Complexity : O(N)
 // ------------------------------------------------------------
 
 class Logic
