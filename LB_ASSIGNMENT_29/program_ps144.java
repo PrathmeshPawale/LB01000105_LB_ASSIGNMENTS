@@ -27,7 +27,7 @@ class CharacterX
     }
 }
 
-class program4
+class program_ps144
 {
     public static void main(String A[])
     {

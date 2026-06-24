@@ -39,7 +39,7 @@ class School
     }
 }
 
-class program5
+class program_ps145
 {
     public static void main(String A[])
     {
