@@ -1,0 +1,64 @@
+// Accept n numbers from user and check whether that N number's contains 11 or not without using flag
+// This(using iCount) not that good approach but works ..break vaprun loop N time traverse honyapasun thambavla
+// bFlag was 1 bit code using this approach 31 additional bits got used so not efficient. Next code best solution for flag removal
+#include<stdio.h>
+#include<stdlib.h>
+#include<stdbool.h>
+// Time Complexity : O(N)
+bool LinearSearch(int Arr[], int iSize, int iNo)
+{
+    int iCnt = 0, iCount = 0;
+
+    for(iCnt = 0; iCnt < iSize; iCnt++)
+    {
+        if(Arr[iCnt] == iNo)
+        {
+            iCount++;
+            break;
+        }
+    }
+    if(iCount == 0)
+    {
+        return false;
+    }
+    else
+    {
+        return true;
+    }
+}
+int main()
+{
+    int *Brr = NULL;
+    int iLength = 0, iCnt = 0, iValue = 0 ;
+    bool bRet = false;
+    
+    printf("Enter the number of elements : \n");
+    scanf("%d",&iLength);
+
+    Brr = (int *)malloc(sizeof(int) * iLength);
+
+    printf("Enter the elements : \n");
+
+    for(iCnt = 0;iCnt  < iLength; iCnt++)
+    {
+        scanf("%d",&Brr[iCnt]);
+    }
+
+    printf("Enter the element that you want to search :\n");
+    scanf("%d",&iValue);
+
+    bRet = LinearSearch(Brr,iLength,iValue);
+
+    if(bRet == true)
+    {
+        printf("Element is present\n");
+    }
+    else
+    {
+        printf("Element is not present\n");
+    }
+
+    free(Brr);
+    
+    return 0;
+}
